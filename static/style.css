@@ -413,7 +413,7 @@ nav:hover .btn:not(:hover) {
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #403F3F;
+    border: 0.3vw solid #403F3F;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
@@ -440,8 +440,8 @@ nav:hover .btn:not(:hover) {
 
 .profile-picture-container {
     position: relative;
-    width: 23vh;
-    height: 23vh;
+    width: 10.6vw;
+    height: 10.6vw;
     margin: 0 auto 20px;
     cursor: pointer;
 }
@@ -540,19 +540,13 @@ nav:hover .btn:not(:hover) {
 .podium-block .position{
     font-family: "Minercraftory", sans-serif;
 }
-.profile-picture {
+.podium-item .profile-picture {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
     border: 3px solid white;
-}
-
-.profile-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .position {

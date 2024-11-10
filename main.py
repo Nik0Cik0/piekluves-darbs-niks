@@ -34,6 +34,16 @@ def login():
         passwd2 = hashlib.sha256(passwd.encode())
         password = passwd2.hexdigest()
 
+        # Check for admin credentials
+        admin_email = "admin@admin"
+        admin_password = "admin"
+        admin_email_hash = hashlib.sha256(admin_email.encode()).hexdigest()
+        admin_password_hash = hashlib.sha256(admin_password.encode()).hexdigest()
+
+        if email_hash == admin_email_hash and password == admin_password_hash:
+            session['userID'] = 'admin'
+            return redirect(url_for('mainpage'))
+
         userExists, userID = dbMethods.checkIfUserExists(email_hash, password)
         if userExists:
             session['userID'] = userID
@@ -91,6 +101,9 @@ def user_page():
 
 @app.route('/mainpage')
 def mainpage():
+    if 'userID' not in session or session['userID'] != 'admin':
+        return redirect(url_for('login'))
+        
     courseID = request.args.get('courseid')
     userID = request.args.get('id')
     lessonID = request.args.get('lessonid')
