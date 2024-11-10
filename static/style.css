@@ -1,597 +1,599 @@
 /********************* Index / majaslapa *********************/
 
 @font-face{
-     font-family: Baloo;
-     src: url(../../static/fonts/BalooBhaina2-VariableFont_wght.ttf);
+    font-family: Baloo;
+    src: url(../../static/fonts/BalooBhaina2-VariableFont_wght.ttf);
 }
 
 @font-face{
-    font-family: Minercraftory;
-    src: url(../../static/fonts/Minercraftory.ttf);
+   font-family: Minercraftory;
+   src: url(../../static/fonts/Minercraftory.ttf);
 }
 *{
-     font-family:Baloo, sans-serif;
-     line-height:1.5;
+    font-family:Baloo, sans-serif;
+    line-height:1.5;
 }
 html{
-     color:#fff;
-     text-align:center;
-     background:#0F121C;
+    color:#fff;
+    text-align:center;
+    background:#0F121C;
 }
 ul li{
-     text-align:left;
+    text-align:left;
 }
 .maja{
-     background:#0F121C;
+    background:#0F121C;
 }
 
 /*Navbars*/
 nav{
-     height:5vh;
-     display:flex;
-     justify-content:space-between;
-     align-items:center;
-     vertical-align:center;
-     width:90%;
-     margin:10px auto;
+    height:5vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    vertical-align:center;
+    width:90%;
+    margin:10px auto;
 }
 nav *{
-     height:5vh;
-     display:flex;
-     align-items:center;
-     vertical-align:center;
-     object-fit: contain;
+    height:5vh;
+    display:flex;
+    align-items:center;
+    vertical-align:center;
+    object-fit: contain;
 
 }
 nav a{
-     margin:0;
-     padding:0;
+    margin:0;
+    padding:0;
 }
 .log-reg{
-     justify-content: center;
+    justify-content: center;
 }
 hr{
-     border:1px solid #403F3F;;
+    border:1px solid #403F3F;;
 }
 .sistema{
-     background:#0F121C;
-     color: #FFF;
-     font-style:italic;
-     text-decoration:underline dotted #FFF;
+    background:#0F121C;
+    color: #FFF;
+    font-style:italic;
+    text-decoration:underline dotted #FFF;
 }
 button{
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .pieteikties{
-     background:#ff6600;
-     color: #FFF;
+    background:#ff6600;
+    color: #FFF;
 }
 .back-btn{
-     background:#ff6600;
-     color: #FFF;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     padding:1vh 1.2vw;
-     
+    background:#ff6600;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding:1vh 1.2vw;
+    
 }
 .back-head{
-     position:absolute;
-     top:5vh;
-     left:2vw;
+    position:absolute;
+    top:5vh;
+    left:2vw;
 }
 
 
 /*Mainpage*/
 table, th, td {
-  border: 1px solid #403F3F;
-  border-collapse: collapse;
-  color: #fff;
+ border: 1px solid #403F3F;
+ border-collapse: collapse;
+ color: #fff;
 }
 table a{
-     color:#fff;
-     text-decoration: none;
+    color:#fff;
+    text-decoration: none;
 }
 .fa-trash{
-     color:#000;
+    color:#000;
 }
 th, td {
-     padding: 15px;
-     text-align: center;
-     word-wrap:break-word;
-     max-width:5vw;
+    padding: 15px;
+    text-align: center;
+    word-wrap:break-word;
+    max-width:5vw;
 }
 table {
-  border-spacing: 5px;
-     min-width: 100%;
-     max-width: 100%;
+ border-spacing: 5px;
+    min-width: 100%;
+    max-width: 100%;
 }
-     th {
-  background-color: #11162a;
-       color: white;
+    th {
+ background-color: #11162a;
+      color: white;
 }
 tr:nth-child(odd) {
-     background-color: #111527;
-     color: black;
+    background-color: #111527;
+    color: black;
 }
 tr:nth-child(even) {
-     background-color: #0c101e;
-     color: black;
+    background-color: #0c101e;
+    color: black;
 }
 
 
 
 .dzest{
-  background-color: #ffa44f;
+ background-color: #ffa44f;
 }
 tr:nth-child(even) .dzest {
-  background-color: #FF8515;
-       color: black;
+ background-color: #FF8515;
+      color: black;
 }
 tr:hover .dzest{
-  background-color: #e17713;
-  color: #000;
+ background-color: #e17713;
+ color: #000;
 }
 .pievienot{
-     text-decoration: none;
-     color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 tr img{
-     width: 2vw;
-     margin: auto ;
-     padding: 2vw ;
-     display: flex;
-     align-items: center;
-     align-self: center;
+    width: 2vw;
+    margin: auto ;
+    padding: 2vw ;
+    display: flex;
+    align-items: center;
+    align-self: center;
 }
 tr div{
-     background-color: #262d48;
-     border-radius: 1vw;
+    background-color: #262d48;
+    border-radius: 1vw;
 }
 /*viss*/  
 
 .form {
-    background-color: #0F121C;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px #403F3F;
-    width: 300px;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: column;
+   background-color: #0F121C;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0px 0px 10px #403F3F;
+   width: 300px;
+   margin: 100px auto;
+   display: flex;
+   flex-direction: column;
 }
 
 .form label {
-    color: #FFF;
-    margin-bottom: 8px;
+   color: #FFF;
+   margin-bottom: 8px;
 }
 
 .form input,
 .form textarea {
-    padding: 10px;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    border: 1px solid #3d3d3d;
-    background-color: #11162a;
-    color: #FFF;
+   padding: 10px;
+   margin-bottom: 16px;
+   border-radius: 4px;
+   border: 1px solid #3d3d3d;
+   background-color: #11162a;
+   color: #FFF;
 }
 
 .form button,button, .button {
-    background-color: #ff6600;
-    color: #FFF;
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+   background-color: #ff6600;
+   color: #FFF;
+   padding: 10px;
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s;
 }
 
 /* Special case for quiz form */
 #quizForm.form {
-    background: none;
-    box-shadow: none;
-    width: auto;
-    margin: 20px 0;
-    padding: 0;
+   background: none;
+   box-shadow: none;
+   width: auto;
+   margin: 20px 0;
+   padding: 0;
 }
 
 button:hover {
-    background-color: #e17713;
+   background-color: #e17713;
 }
 #logout{
-    background-color: #ff3300;
+   background-color: #ff3300;
 }
 
 .form-dlt{
-    background-color: #0F121C;
-    padding: 0px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 0px;
-    margin: 0px;
-    position:absolute;
+   background-color: #0F121C;
+   padding: 0px;
+   border-radius: 8px;
+   box-shadow: 0px 0px 0px;
+   margin: 0px;
+   position:absolute;
 }
 .form-dlt #logout{
-    position:relative;
-    top:0;
-    left:0;
-    padding: 1vw 1vw;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    width: 9vw;
+   position:relative;
+   top:0;
+   left:0;
+   padding: 1vw 1vw;
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+   width: 9vw;
 }
 /*Page/kursu izskats*/
 .kursi{
-    background:#0F121C;
-    color: #FFF;
-    display: grid;
-    grid-template-columns: auto auto auto;
+   background:#0F121C;
+   color: #FFF;
+   display: grid;
+   grid-template-columns: auto auto auto;
 }
 .kurss {
-    width: 28vw;
-    max-width: 28vw;
-    min-width: 28vw;
-    height: 28vw;
-    min-height: 28vw;
-    max-height: 28vw;
-    margin: 2vw;
-    border-radius: 1vw;
-    word-wrap: break-word;
-    position: relative;
-    overflow: hidden; 
+   width: 28vw;
+   max-width: 28vw;
+   min-width: 28vw;
+   height: 28vw;
+   min-height: 28vw;
+   max-height: 28vw;
+   margin: 2vw;
+   border-radius: 1vw;
+   word-wrap: break-word;
+   position: relative;
+   overflow: hidden; 
 }
 
 .coverphoto {
-    position: absolute;
-    top: 100px; 
-    left: 100px; 
-    right: 0; 
-    bottom: 0; 
-    z-index: 0;
-    rotate: -45deg;
+   position: absolute;
+   top: 100px; 
+   left: 100px; 
+   right: 0; 
+   bottom: 0; 
+   z-index: 0;
+   rotate: -45deg;
 }
 
 .coverphoto img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    mix-blend-mode: soft-light; 
+   width: 100%; 
+   height: auto; 
+   object-fit: cover; 
+   mix-blend-mode: soft-light; 
 }
 .kurss_augsa{
-    display:flex;
-    justify-content:space-between;
+   display:flex;
+   justify-content:space-between;
 }
 .kurss_nosaukums{
-    padding-top: 20px;
-    line-height: 1;
+   padding-top: 20px;
+   line-height: 1;
 }
 .kurss_nosaukums h1{
-    font-size: 4vw;
-    margin: 0;
+   font-size: 4vw;
+   margin: 0;
 }
 .kurss_nosaukums h2{
-    font-size: 2vw;
-    margin: 0;
+   font-size: 2vw;
+   margin: 0;
 }
 .kurss .kurss_augsa, .kurss p{
-    margin:0 2vw;
-    text-align:left;
+   margin:0 2vw;
+   text-align:left;
 }
 .kurss p{
-    width: 32vw;
-    position: absolute;
-    bottom: 14vh;
-    left: 0;
-    word-wrap:break-word;
-    font-size: 3vh;
+   width: 32vw;
+   position: absolute;
+   bottom: 14vh;
+   left: 0;
+   word-wrap:break-word;
+   font-size: 3vh;
 }
 .coverphoto{
-    mix-blend-mode: soft-light;
-    overflow: hidden;
-    position:absolute;
-    z-index:0;
+   mix-blend-mode: soft-light;
+   overflow: hidden;
+   position:absolute;
+   z-index:0;
 }
 a{
-    text-decoration: none;
-    color: #FFF;
+   text-decoration: none;
+   color: #FFF;
 }
 .stundas{
-    margin: auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
+   margin: auto;
+   width: 100%;
+   display: grid;
+   grid-template-columns: auto auto auto;
 }
 .stunda{
-    width: 25vw;
-    margin: 1vw;
-    padding: 1vw 2vw;
-    background: #181C2E;
-    border-radius: 10px;
+   width: 25vw;
+   margin: 1vw;
+   padding: 1vw 2vw;
+   background: #181C2E;
+   border-radius: 10px;
 }
 
 .stunda-btn{
-    background-color: #FF8515;
-    padding: 1vh 1vw;
-    border-radius: 2vw;
+   background-color: #FF8515;
+   padding: 1vh 1vw;
+   border-radius: 2vw;
 }
 .theory-content{
-    margin:3vw auto;
-    font-size:2vw;
-    text-align:left;
-    width:90vw;
+   margin:3vw auto;
+   font-size:2vw;
+   text-align:left;
+   width:90vw;
 }
 
 /*Index*/
+hero{
+}
 hero img{
-    height:90vh;
-    margin: 3vh 2vh;
-    display:flex;
-    justify-content:left;
+   height:90vh;
+   margin: 3vh 2vh;
+   display:flex;
+   justify-content:left;
 }
 hero div{
-    width:40vw;
-    position:absolute;
-    top:35vh;
-    right:0;
-    font-size:3vh;
+   width:40vw;
+   position:absolute;
+   top:35vh;
+   right:0;
+   font-size:3vh;
 }
 hero .button{
-    font-size:3vh;
+   font-size:3vh;
 }
 
 hero .register{
-    width:20vw;
+   width:20vw;
 }
 #container{
-    background:#181C2E;
-    padding:10vh 10vw;
+   background:#181C2E;
+   padding:10vh 10vw;
 }
 #container ul{
-    list-style:none;
-    font-size:5vh;
+   list-style:none;
+   font-size:5vh;
 }
 #container li{
-    margin-top:15vh;
+   margin-top:15vh;
 }
 
 .progress-container {
-    width: 90%;
-    height: 20px;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 4vh;
+   width: 90%;
+   height: 20px;
+   background-color: #D9D9D9;
+   border-radius: 10px;
+   margin: 0 auto;
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 4vh;
 }
 
 .progress-bar {
-    height: 100%;
-    background-color: #FF8515;
-    border-radius: 10px;
-    transition: width 0.3s ease;
-    position: relative;
+   height: 100%;
+   background-color: #FF8515;
+   border-radius: 10px;
+   transition: width 0.3s ease;
+   position: relative;
 }
 
 .progress-text {
-    position: absolute;
-    right: 5px;
-    color: white;
-    font-size: 12px;
-    line-height: 20px;
+   position: absolute;
+   right: 5px;
+   color: white;
+   font-size: 12px;
+   line-height: 20px;
 }
 nav i{
-    margin-top: 4vh;
-    margin-left: 0.5vw;
+   margin-top: 4vh;
+   margin-left: 0.5vw;
 }
 nav .btn{
-    color: #fff;
-    transition: all 0.3s ease-in;
+   color: #fff;
+   transition: all 0.3s ease-in;
 }
 nav .btn:hover{
-    background: #ff6600;
-    padding: 0.5vh 1vw;
-    border-radius: 1vw;
-    transition: all 0.3s ease-in;
+   background: #ff6600;
+   padding: 0.5vh 1vw;
+   border-radius: 1vw;
+   transition: all 0.3s ease-in;
 }
 nav:hover .btn:not(:hover) {
-    color: #3d3d3d;
-    transition: all 0.3s ease-in;
+   color: #3d3d3d;
+   transition: all 0.3s ease-in;
 }
 
 .profile-picture{
-    width:10vw;
-    background-size:cover;
-    background-position:center;
-    height: 10vw;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 0.3vw solid #403F3F;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+   width:10vw;
+   background-size:cover;
+   background-position:center;
+   height: 10vw;
+   margin: 0 auto 20px;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 0.3vw solid #403F3F;
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .profile-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 .profile-picture-small {
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #403F3F;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   width: 6vh;
+   height: 6vh;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 2px solid #403F3F;
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .profile-picture-small img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 .profile-picture-container {
-    position: relative;
-    width: 10.6vw;
-    height: 10.6vw;
-    margin: 0 auto 20px;
-    cursor: pointer;
+   position: relative;
+   width: 10.6vw;
+   height: 10.6vw;
+   margin: 0 auto 20px;
+   cursor: pointer;
 }
 
 .profile-picture-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: transparent;
-    transition: all 0.3s ease;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: transparent;
+   transition: all 0.3s ease;
 }
 
 .profile-picture-container:hover .profile-picture-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+   background: rgba(0, 0, 0, 0.5);
+   color: white;
 }
 
 .profile-picture-container:hover .profile-picture img {
-    filter: brightness(0.8);
+   filter: brightness(0.8);
 }
 
 #profile_picture {
-    display: none;
+   display: none;
 }
 
 .leaderboard-page {
-    color: white;
-    min-height: 100vh;
+   color: white;
+   min-height: 100vh;
 }
 
 .back-button {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
+   color: white;
+   font-size: 24px;
+   text-decoration: none;
 }
 
 .back-button i{
-    margin: 1vh 0 0 0;
+   margin: 1vh 0 0 0;
 }
 
 .leaderboard-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
 }
 .fa-ranking-star{
-    margin-top: 0.5vh;
+   margin-top: 0.5vh;
 }
 .podium {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 50px;
-    height: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   margin-bottom: 50px;
+   height: 400px;
 }
 .podium-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 20px;
 }
 
 .podium-block {
-    width: 20vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
+   width: 20vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   border-radius: 10px;
 }
 
 .gold .podium-block {
-    background-color: #E7AF0A;
-    height: 300px;
-    color: #876601;
+   background-color: #E7AF0A;
+   height: 300px;
+   color: #876601;
 }
 
 .silver .podium-block {
-    background-color: #D9D9D9;
-    height: 250px;
-    color: #A8A7A7;
+   background-color: #D9D9D9;
+   height: 250px;
+   color: #A8A7A7;
 }
 
 .bronze .podium-block {
-    background-color: #E29853;
-    height: 200px;
-    color: #C2732A;
+   background-color: #E29853;
+   height: 200px;
+   color: #C2732A;
 }
 .podium-block .position{
-    font-family: "Minercraftory", sans-serif;
+   font-family: "Minercraftory", sans-serif;
 }
 .podium-item .profile-picture {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 10px;
-    border: 3px solid white;
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   overflow: hidden;
+   margin-bottom: 10px;
+   border: 3px solid white;
 }
 
 .position {
-    font-size: 4rem;
-    font-weight: bold;
+   font-size: 4rem;
+   font-weight: bold;
 }
 
 .name {
-    font-size: 24px;
-    margin: 5px 0;
+   font-size: 24px;
+   margin: 5px 0;
 }
 
 .xp {
-    font-size: 18px;
-    opacity: 0.8;
+   font-size: 18px;
+   opacity: 0.8;
 }
 
 .leaderboard-list {
-    max-width: 800px;
-    margin: 0 auto;
+   max-width: 800px;
+   margin: 0 auto;
 }
 
 .leaderboard-item {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   margin: 10px 0;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
 }
 
 .leaderboard-item .profile-picture {
-    width: 50px;
-    height: 50px;
-    margin: 0 20px;
+   width: 50px;
+   height: 50px;
+   margin: 0 20px;
 }
 
 .leaderboard-item .position {
-    font-size: 24px;
-    width: 50px;
+   font-size: 24px;
+   width: 50px;
 }
 
 .leaderboard-item .name {
-    flex-grow: 1;
+   flex-grow: 1;
 }
 
 .leaderboard-item .xp {
-    margin-left: auto;
-    padding-right: 20px;
+   margin-left: auto;
+   padding-right: 20px;
 }
