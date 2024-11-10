@@ -420,22 +420,15 @@ def course_icon(course_id):
 
 @app.route('/courses')
 def courses():
-    # ... existing code ...
-    
-    # For each course, calculate progress
+    if 'userID' not in session:
+        return redirect(url_for('login'))
+
+    courses = dbMethods.showAllCourses()
     courses_with_progress = []
+    
     for course in courses:
-        # Get total lessons in course
-        cursor.execute("SELECT COUNT(*) FROM lessons WHERE course_id = ?", (course[0],))
-        total_lessons = cursor.fetchone()[0]
-        
-        # Get completed lessons for this user and course
-        cursor.execute("""
-            SELECT COUNT(*) FROM completed_lessons 
-            WHERE user_id = ? AND lesson_id IN 
-                (SELECT id FROM lessons WHERE course_id = ?)
-        """, (session['userID'], course[0]))
-        completed_lessons = cursor.fetchone()[0]
+        total_lessons = dbMethods.countLessonsInCourse(course[0])
+        completed_lessons = dbMethods.countCompletedLessons(session['userID'], course[0])
         
         # Calculate progress percentage
         progress = round((completed_lessons / total_lessons * 100) if total_lessons > 0 else 0)
