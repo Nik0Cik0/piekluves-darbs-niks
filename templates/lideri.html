@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+    <title>Līderu saraksts</title>
+</head>
+<body class="leaderboard-page">
+    <nav id="header">
+        <a href="{{ url_for('user_page') }}" class="back-button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
+        <h1>Līderu saraksts <i class="fa-solid fa-ranking-star" style="color: #ffffff;"></i></h1>
+        <img src="{{url_for('static', filename='images/codelatvian.png')}}" alt="logo" class="logo">
+    </nav>
+    <hr>
+    <br>
+    <div class="leaderboard-container">
+        <!-- Top 3 Podium -->
+        <div class="podium">
+            <!-- Second Place -->
+            {% if leaders|length > 1 %}
+            <div class="podium-item silver">
+                <div class="profile-picture">
+                    {% if leaders[1][2] %}
+                        <img src="{{ url_for('get_profile_picture', user_id=leaders[1][3]) }}" alt="Profile">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/default_profile.png') }}" alt="Default">
+                    {% endif %}
+                </div>
+                <div class="podium-block">
+                    <span class="position">2</span>
+                    <span class="name">{{ leaders[1][0] }}</span>
+                    <span class="xp">{{ leaders[1][1] }}xp</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- First Place -->
+            {% if leaders|length > 0 %}
+            <div class="podium-item gold">
+                <div class="profile-picture">
+                    {% if leaders[0][2] %}
+                        <img src="{{ url_for('get_profile_picture', user_id=leaders[0][3]) }}" alt="Profile">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/default_profile.png') }}" alt="Default">
+                    {% endif %}
+                </div>
+                <div class="podium-block">
+                    <span class="position">1</span>
+                    <span class="name">{{ leaders[0][0] }}</span>
+                    <span class="xp">{{ leaders[0][1] }}xp</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Third Place -->
+            {% if leaders|length > 2 %}
+            <div class="podium-item bronze">
+                <div class="profile-picture">
+                    {% if leaders[2][2] %}
+                        <img src="{{ url_for('get_profile_picture', user_id=leaders[2][3]) }}" alt="Profile">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/default_profile.png') }}" alt="Default">
+                    {% endif %}
+                </div>
+                <div class="podium-block">
+                    <span class="position">3</span>
+                    <span class="name">{{ leaders[2][0] }}</span>
+                    <span class="xp">{{ leaders[2][1] }}xp</span>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Rest of the Leaderboard -->
+        <div class="leaderboard-list">
+            {% for leader in leaders[3:] %}
+            <div class="leaderboard-item">
+                <span class="position">{{ loop.index + 3 }}.</span>
+                <div class="profile-picture">
+                    {% if leader[2] %}
+                        <img src="{{ url_for('get_profile_picture', user_id=leader[3]) }}" alt="Profile">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/default_profile.png') }}" alt="Default">
+                    {% endif %}
+                </div>
+                <span class="name">{{ leader[0] }}</span>
+                <span class="xp">{{ leader[1] }}xp</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html> 

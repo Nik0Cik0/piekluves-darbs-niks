@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Labot lietotāja datus</title>
+  </head>
+  <body>
+    <form method="POST" action="{{url_for('edituser')}}" class="form">
+      
+      <input type="text" name="id" id="id" value="{{p1[0]}}" hidden>
+
+      <label for="email"> E-pasts </label>
+      <input type="email" id="email" name="email" value="{{p1[3]}}">
+
+      <label for="password"> Parole </label>
+      <input type="text" id="password" name="password" value="{{p1[2]}}">
+
+      <label for="username"> Lietotājvārds </label>
+      <input type="text" id="username" name="username" value="{{p1[1]}}">
+
+      <label for="klase"> Klase </label>
+      <input type="text" id="klase" name="klase" value="{{p1[4]}}">
+
+      <label for="subclass"> Apkakšklase </label>
+      <input type="text" id="subclass" name="subclass" value="{{p1[5]}}">
+
+      <label for="date"> Dzimšanas datums </label>
+      <input type="date" id="date" name="date" value="{{p1[6]}}">
+
+      <label for="desc"> Apraksts </label>
+      <input type="text" id="desc" name="desc" value="{{p1[7]}}">
+
+      <label for="xp"> XP </label>
+      <input type="text" id="xp" name="xp" value="{{p1[8]}}">
+
+      <button type="submit"> Saglabāt </button>
+    </form>
+  </body>
+  
+</html>

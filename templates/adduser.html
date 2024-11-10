@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Pievienot jaunu lietotāju</title>
+  </head>
+  <body>
+    <form method="POST" action="{{url_for('adduser')}}" class="form">
+
+      <input type="text" name="id" id="id"  hidden>
+
+      <label for="email"> E-pasts </label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password"> Parole </label>
+      <input type="text" id="password" name="password" required>
+
+      <label for="username"> Lietotājvārds </label>
+      <input type="text" id="username" name="username">
+
+      <label for="klase"> Klase </label>
+      <input type="text" id="klase" name="klase" >
+
+      <label for="subclass"> Apkakšklase </label>
+      <input type="text" id="subclass" name="subclass" >
+
+      <label for="date"> Dzimšanas datums </label>
+      <input type="date" id="date" name="date" >
+
+      <label for="desc"> Apraksts </label>
+      <input type="text" id="desc" name="desc" >
+
+      <label for="xp"> XP </label>
+      <input type="number" id="xp" name="xp" value="0">
+
+      <button type="submit"> Saglabāt </button>
+    </form>
+  </body>
+  
+</html>

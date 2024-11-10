@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ lesson[2] }} - {{ course[1] }} Lesson</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+    <style>
+        /* Styles for imported content */
+        .theory-content {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        
+        /* Style for interactive elements */
+        .theory-content input[type="radio"],
+        .theory-content input[type="checkbox"],
+        .theory-content input[type="text"] {
+            margin: 8px 0;
+        }
+        
+        .theory-content button {
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Style for code blocks */
+        .theory-content pre {
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="back-head">
+        <a class="back-btn" href="{{ url_for('view_lessons', course_id=course[0]) }}">
+            <i class="fa-solid fa-angle-left fa-xl" style="color: #ffffff;"></i>
+        </a>   
+    </header>
+    <h1>{{ course[1] }} - Stunda: {{ lesson[2] }}</h1>
+    <section>
+        <div class="theory-content">
+            {{ lesson[4]|safe }} 
+        </div>
+    </section>
+
+    {% if progress %}
+    
+    {% endif %}
+
+    <footer>
+        <form action="{{ url_for('complete_lesson', lesson_id=lesson[0]) }}" method="POST" class="form">
+            <button type="submit">Pabeigt Stundu</button>
+        </form>
+    </footer>
+
+</body>
+</html>

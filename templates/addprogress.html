@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Pievienot progresu</title> 
+  </head>
+  <body>
+    <form method="POST" action="{{url_for('addprogress')}}" class="form">  
+
+      <label for="userid">Lietotāja ID</label>
+      <input type="text" id="userid" name="userid">  
+
+      <label for="lessonid">Stundas ID</label>
+      <input type="text" id="lessonid" name="lessonid">
+
+
+      <label for="status">Status</label>
+      <input type="text" id="status" name="status" >
+
+      <!----Apšaubu nepieciešamību statusam---->
+      <input type="text" id="description" name="description" hidden>
+
+      <button type="submit">Saglabāt</button>
+    </form>
+  </body>
+</html>

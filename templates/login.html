@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pieteikties kontam</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  </head>
+  <body class="login">
+    <nav class="log-reg">
+      <a href="{{url_for('index')}}"><img src="../static/images/codelatvian.png" draggable="false" class="logo"></a>
+    </nav>
+    <div class="conteiner">
+      <form method="POST" action="{{url_for('login')}}" class="form">
+        
+        <h2> Pieteikšanās </h2>
+        <label for="email"> E-pasts (email) </label>
+        <input type="email" id="email" name="email" required>
+        <label for="password"> Parole (password) </label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="pieteikties"> Pieteikties </button>
+        <a href="{{url_for('register')}}">Neesi lietotājs? Reģistrējies!</a>
+      </form>
+    </div>
+  </body>
+  <style>
+    
+  </style>
+</html>

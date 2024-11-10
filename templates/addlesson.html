@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Labot stundu datus</title>  
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data" class="form">
+
+      <input type="text" name="lessonid" id="lessonid"  hidden>
+
+      <label for="courseid"> Kursa ID </label>
+      <input type="text" id="courseid" name="courseid" >
+
+      <label for="name"> Stundas nosaukums </label>
+      <input type="text" id="name" name="name" >
+
+      <label for="desc"> Apraksts </label>
+      <input type="text" id="desc" name="desc" >
+
+      <label for="saturs"> Stundas saturs </label>
+      <textarea name="saturs"></textarea>
+
+      <label>Vai augšupielādēt HTML failu:</label>
+      <input type="file" name="content_file" accept=".html">
+
+      <button type="submit"> Saglabāt </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Labot stundu datus</title>  
+    <style>
+      .form-group {
+        margin: 15px 0;
+      }
+      textarea {
+        width: 100%;
+        min-height: 200px;
+        padding: 10px;
+        margin: 5px 0;
+      }
+      .preview {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data" action="{{url_for('editlesson')}}" class="form">
+      <input type="text" name="lessonid" id="lessonid" value="{{p3[0]}}" hidden>
+
+      <div class="form-group">
+        <label for="courseid">Kursa ID</label>
+        <input type="text" id="courseid" name="courseid" value="{{p3[1]}}">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Stundas nosaukums</label>
+        <input type="text" id="name" name="name" value="{{p3[2]}}">
+      </div>
+
+      <div class="form-group">
+        <label for="desc">Apraksts</label>
+        <input type="text" id="desc" name="desc" value="{{p3[3]}}">
+      </div>
+
+      <div class="form-group">
+        <label for="saturs">Stundas saturs</label>
+        <textarea id="saturs" name="saturs">{{ p3[4] if p3 else '' }}</textarea>
+        
+        <label>Vai augšupielādēt HTML failu:</label>
+        <input type="file" name="content_file" accept=".html">
+      </div>
+
+      <!-- Live Preview Section -->
+      <div class="form-group">
+        <label>Priekšskatījums:</label>
+        <div id="preview" class="preview"></div>
+      </div>
+      
+      <button type="submit">Saglabāt</button>
+    </form>
+
+    <script>
+      // Live preview functionality
+      const textarea = document.getElementById('saturs');
+      const preview = document.getElementById('preview');
+
+      // Update preview when content changes
+      function updatePreview() {
+        preview.innerHTML = textarea.value;
+      }
+
+      // Initialize preview with current content
+      updatePreview();
+
+      // Add event listeners for real-time preview
+      textarea.addEventListener('input', updatePreview);
+      textarea.addEventListener('change', updatePreview);
+
+      // Handle file uploads
+      const fileInput = document.querySelector('input[type="file"]');
+      fileInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            textarea.value = e.target.result;
+            updatePreview();
+          };
+          reader.readAsText(file);
+        }
+      });
+    </script>
+  </body>
+</html>

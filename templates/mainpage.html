@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galvena lapa</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <form class="form-dlt"action="{{ url_for('logout') }}" method="GET">
+        <button id="logout" type="submit">Izrakstīties <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></button>
+    </form>
+    <h1>Lietotāji <i class="fa-solid fa-user fa-xl"></i> </h1>
+    <br>
+    <table >
+      <tr>
+        <th>ID</th> 
+        <th>Username</th> 
+        <th>Password</th>
+        <th>E-pasts</th> 
+        <th>Klase</th> 
+        <th>Apakšklase</th>
+        <th>Dzimšanas datums</th> 
+        <th>Apraksts</th>
+        <th>XP</th>
+        <th colspan="2">Rīki</th>
+      </tr>
+      {% for lietotajs in p1%}
+      <tr>
+        <td>{{lietotajs[0]}}</td>  
+        <td>{{lietotajs[1]}}</td>  
+        <td>{{lietotajs[2]}}</td>
+        <td>{{lietotajs[3]}}</td>
+        <td>{{lietotajs[4]}}</td>
+        <td>{{lietotajs[5]}}</td>
+        <td>{{lietotajs[6]}}</td>
+        <td>{{lietotajs[7]}}</td>
+        <td>{{lietotajs[8]}}</td>
+        <td>
+          <a href="{{url_for('edituser',id=lietotajs[0])}}">
+            Labot  <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </td>
+        <td class="dzest">
+          <a href="{{url_for('mainpage',id=lietotajs[0])}}">
+            <i class="fa-solid fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{url_for('adduser')}}" class="pievienot">
+      Pievienot jaunu <i class="fa-solid fa-circle-plus" style="color: #fff;"></i>
+    </a>
+
+    <hr>
+    <br>
+
+    <h1>Kursi <i class="fa-solid fa-book fa-xl" style="color: #ff6600;"></i> </h1>
+    <br>
+    <table>
+      <tr>
+        <th>ID</th> 
+        <th>Nosaukums</th> 
+        <th>Stundu skaits</th>
+        <th>Līmenis</th> 
+        <th>Apraksts</th> 
+        <th>Krāsa</th>
+        <th>Teksta krāsa</th> 
+        <th>Kursa bilde</th> 
+        <th colspan="2">Rīki</th>
+      </tr>
+      {% for course in p2%}
+      
+      <tr>  
+        <td>{{course[0]}}</td>
+        <td>{{course[1]}}</td>
+        <td>{{course[2]}}</td>
+        <td>{{course[3]}}</td>
+        <td>{{course[4]}}</td>
+        <td>{{course[5]}}</td>
+        <td>{{course[6]}}</td>
+        <td><div><img src="{{ url_for('course_icon', course_id=course[0]) }}" alt=""></div></td>
+        <td>
+          <a href="{{url_for('editcourse',courseid=course[0])}}">
+            Labot  <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </td>
+        <td class="dzest">
+          <a href="{{url_for('mainpage',courseid=course[0])}}">
+            <i class="fa-solid fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{url_for('addcourse')}}"  class="pievienot">
+      Pievienot jaunu <i class="fa-solid fa-circle-plus" style="color: #fff;"></i>
+    </a>
+    
+    <hr>
+    <br>
+
+    <h1>Stundas <i class="fa-solid fa-person-chalkboard fa-xl" style="color: #52cbff;"></i> </h1>
+    <br>
+    
+    <table>
+      <tr>
+        <th>ID</th> 
+        <th>Kursa ID</th> 
+        <th>Nosaukums</th>
+        <th>Apraksts</th> 
+        <th>Stundu saturs</th> 
+        <th colspan="2">Rīki</th>
+      </tr>
+      {% for lesson in p3%}
+      <tr>  
+        <td>{{lesson[0]}}</td>
+        <td>{{lesson[1]}}</td>
+        <td>{{lesson[2]}}</td>
+        <td>{{lesson[3]}}</td>
+        <td>{{lesson[4]}}</td>
+        <td>
+          <a href="{{url_for('editlesson',lessonid=lesson[0])}}">
+            Labot  <i class="fa-solid fa-pen-to-square"></i>
+          </a>
+        </td>
+        <td class="dzest">
+          <a href="{{url_for('mainpage',lessonid=lesson[0])}}">
+            <i class="fa-solid fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{url_for('addlesson')}}" class="pievienot">
+      Pievienot jaunu <i class="fa-solid fa-circle-plus" style="color: #fff;"></i>
+    </a>
+
+    <hr>
+    <br>
+    <h1>Progress <i class="fa-solid fa-bars-progress fa-xl" style="color: #46c856;"></i></h1>
+<br>
+<table>
+  <tr>
+    <th>ID</th> 
+    <th>Lietotāja ID</th> 
+    <th>Stundas ID</th> 
+    <th>Statuss</th>
+    <th colspan="2">Rīki</th>
+  </tr>
+  {% for progress in p4 %}  
+  <tr>  
+    <td>{{progress[0]}}</td>
+    <td>{{progress[1]}}</td>
+    <td>{{progress[2]}}</td>
+    <td>{{progress[4]}}</td>
+    <td>
+      <a href="{{url_for('editprogress', progressid=progress[0])}}">  
+        Labot <i class="fa-solid fa-pen-to-square"></i>
+      </a>
+    </td>
+    <td class="dzest">
+      <a href="{{url_for('mainpage', progressid=progress[0])}}">  
+        <i class="fa-solid fa-trash"></i>
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="{{url_for('addprogress')}}"  class="pievienot">  
+  Pievienot jaunu <i class="fa-solid fa-circle-plus" style="color: #fff;"></i>
+</a>
+
+    
+    <hr>
+    <br>
+    
+    
+  </body>
+</html>

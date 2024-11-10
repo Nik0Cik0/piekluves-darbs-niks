@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+    <title>{{ course[1] }} Stundas</title>
+</head>
+<body>
+    <nav id="header">
+        <button><a href="{{ url_for('user_page') }}">Atpakaļ uz kursiem</a></button>
+        <h1>{{ course[1] }} Stundas</h1> 
+        <img src="{{url_for('static', filename='images/codelatvian.png')}}" alt="logo" >
+    </nav>
+    <hr>
+    
+    <div class="stundas">
+        {% for lesson in lessons %}
+        <div class="stunda">
+            <h2>{{ lesson[2] }}</h2>
+            <p>Apraksts: </br>{{ lesson[3] }}</p>
+
+        
+            <a href="{{ url_for('update_lesson_progress', lesson_id=lesson[0]) }}" class="stunda-btn">
+                {% if lesson[5] == "progresā" %}
+                    Turpināt stundu
+                {% elif lesson[5] == "pabeigts" %}
+                    Skatīt stundu
+                {% else %}
+                    Uzsākt stundu
+                {% endif %}
+            </a>
+
+            <p>Statuss: 
+                {% if lesson[5] == "progresā" %}
+                    Progresā
+                {% elif lesson[5] == "pabeigts" %}
+                    Pabeigts
+                {% else %}
+                    nav uzsākts
+                {% endif %}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    
+     
+    
+</body>
+</html>

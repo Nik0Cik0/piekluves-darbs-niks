@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>Mājaslapa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+</head>
+<body class="maja">
+  <nav id="header">
+    <img src="{{url_for('static', filename='images/codelatvian.png')}}" alt="logo" >
+    <a href="{{url_for('login')}}"><button class="sistema">Ieiet sistēmā</button></a>
+  </nav>
+  <hr>
+  <hero>
+    <div>
+      <h1>Bezmaksas programmēšanas apgušanas mājaslapa latviešu valodā! </h1>
+      <a href="{{url_for('register')}}"><button class="button register">Reģistrēties</button></a>
+    </div>
+    <img src="{{url_for('static', filename='images/zeme.webp')}}">
+    
+  </hero>
+  <div id="container">
+    <h1>Jauns ceļš izglītībā</h1>
+    <ul>
+      <li><i class="fa-solid fa-book-open fa-xl" style="color: #ffffff;"></i> Viegls un strukturēts mācību process ar interaktīviem uzdevumiem un izaicinājumiem</li>
+      <li><i class="fa-solid fa-code fa-xl" style="color: #ffffff;"></i> Praktiskas nodarbības ar reālās dzīves piemēriem, lai jūs varētu redzēt savas zināšanas darbībā</li>
+      <li><i class="fa-solid fa-spinner fa-xl" style="color: #ffffff;"></i> Personīgais progress – sekojiet līdzi savam mācību tempam un redziet savu attīstību</li>
+      <li><i class="fa-solid fa-message fa-xl" style="color: #ffffff;"></i> Viss latviešu valodā</li>
+    </ul>
+  </div>
+  
+</body>
+  
+</html>

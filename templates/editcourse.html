@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Labot konfekšu datus</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data" action="{{url_for('editcourse')}}" class="form">
+
+      <input type="text" name="courseid" id="courseid" value="{{p2[0]}}" hidden>
+
+      <label for="name"> Kursa nosaukums </label>
+      <input type="text" id="name" name="name" value="{{p2[1]}}">
+
+      <label for="count"> Stundu skaits </label>
+      <input type="text" id="count" name="count" value="{{p2[2]}}">
+
+      <label for="level"> Grūtības līmenis </label>
+      <input type="text" id="level" name="level" value="{{p2[3]}}">
+
+      <label for="desc"> Apraksts </label>
+      <input type="text" id="desc" name="desc" value="{{p2[4]}}">
+
+      <label for="color"> Krāsa </label>
+      <input type="text" id="color" name="color" value="{{p2[5]}}">
+
+      <label for="tcolor"> Teksta krāsa </label>
+      <input type="text" id="tcolor" name="tcolor" value="{{p2[6]}}">
+
+      <label for="img"> Fona bilde (importēt melnbaltu) </label>
+      <input type="file" id="img" name="img" value="{{p2[7]}}">
+      
+      <button type="submit"> Saglabāt </button>
+    </form>
+  </body>
+  
+  
+</html>

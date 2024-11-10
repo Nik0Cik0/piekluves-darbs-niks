@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Pievienot jaunu konfekti</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data" action="{{url_for('addcourse')}}" class="form">
+
+      <label for="name"> Kursa nosaukums </label>
+      <input type="text" id="name" name="name">
+
+      <label for="count"> Stundu skaits </label>
+      <input type="text" id="count" name="count">
+
+      <label for="level"> Grūtības līmenis </label>
+      <input type="text" id="level" name="level">
+
+      <label for="desc"> Apraksts </label>
+      <input type="text" id="desc" name="desc">
+
+      <label for="color"> Krāsa </label>
+      <input type="text" id="color" name="color">
+
+      <label for="tcolor"> Teksta krāsa </label>
+      <input type="text" id="tcolor" name="tcolor">
+
+      <label for="img"> Fona bilde (importēt melnbaltu) </label>
+      <input type="file" id="img" name="img" accept="image/*">
+
+      <button type="submit"> Pievienot jaunu konfekti </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <title>Reģistrēties kontam</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+  <!---Augšējā daļa ----->
+  <header>
+    <nav class="log-reg">
+      <a href="{{url_for('index')}}"><img src="../static/images/codelatvian.png" draggable="false" class="logo"></a>
+    </nav>
+        
+  </header>
+
+        <div class="conteiner">
+            <form method="POST" action="{{url_for('register')}}" class="form">
+                <label for="email"> E-pasts (e-mail)* </label>
+                <input type="email" class="epasts" id="email" placeholder="piemers@atv.rta.lv" name="email" required>
+
+                <label for="password"> Parole (password)* </label>
+                <input type="password" class="parole" id="password" placeholder="Parole" name="password" required>
+
+                <label for="username"> Segvārds (username) </label>
+                <input type="text" class="epasts" id="username" placeholder="Segvārds" name="username">
+
+                <label for="class"> Klase (class) </label>
+                <input type="number" id="class" placeholder="12" name="class">
+
+                <label for="subclass"> Apakšklase (subclass) </label>
+                <input type="text" id="subclass" placeholder="b" name="subclass">
+
+                <label for="birthdate"> Dzimšanas datums (birthdate) </label>
+                <input type="date" id="birthdate" name="birthdate">
+
+                <label for="description"> Apraksts (description) </label>
+                <textarea id="description" name="description" placeholder="Mani sauc..."></textarea>
+
+                <textarea id="xp" name="xp" value="0" hidden></textarea>
+
+                <button type="submit" class="pieteikties"> Reģistrēties </button>
+                <p>Esi lietotājs? <a href="{{url_for('login')}}">Piesakies!</a></p>
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

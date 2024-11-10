@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+    <title>Labot Profilu</title>
+</head>
+<body>
+    <h1>Labot Profilu</h1>
+    <form action="{{ url_for('editprofile') }}" method="POST" class="form" enctype="multipart/form-data">
+        <label for="profile_picture" class="profile-picture-container">
+            <div class="profile-picture">
+                {% if p1[9] %}
+                    <img src="{{ url_for('get_profile_picture', user_id=p1[0]) }}" alt="Profile Picture">
+                {% else %}
+                    <img src="{{ url_for('static', filename='images/default_profile.png') }}" alt="Default Profile">
+                {% endif %}
+            </div>
+            <div class="profile-picture-overlay">
+                <span>Labot <i class="fa-solid fa-pen-to-square"></i></span>
+            </div>
+            <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+        </label>
+        
+        <input type="hidden" id="email" name="email" value="{{ p1[3] }}">
+    
+        <label for="klase">Klase:</label>
+        <input type="number" id="klase" name="klase" value="{{ p1[4] }}" required>
+    
+        <label for="subclass">Apakš-klase:</label>
+        <input type="text" id="subclass" name="subclass" value="{{ p1[5] }}">
+    
+        <label for="birthdate">Dzimšanas datums:</label>
+        <input type="date" id="birthdate" name="birthdate" value="{{ p1[6] }}" required>
+    
+        <label for="description">Apraksts:</label>
+        <textarea id="description" name="description">{{ p1[7] }}</textarea>
+
+        <input type="hidden" name="id" value="{{ p1[0] }}">
+        <input type="hidden" id="username" name="username" value="{{ p1[1] }}">
+        <input type="hidden" name="password" value="{{ p1[2] }}">
+        <input type="hidden" name="xp" value="{{ p1[8] }}">
+        <button type="submit">Saglabāt izmaiņas</button>
+    </form>
+    <form action="{{ url_for('logout') }}" method="GET" class="form">
+        <button id="logout" type="submit">Izrakstīties <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i> </button>
+    </form>
+    <script>
+        // Optional: Preview the selected image before upload
+        document.getElementById('profile_picture').addEventListener('change', function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.querySelector('.profile-picture img').src = e.target.result;
+                };
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        });
+    </script>
+</body>
+</html>

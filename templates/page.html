@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/429bfcec62.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <title>CodeLatvian</title>
+</head>
+<body>
+  <nav id="header">
+      
+      <a href="{{ url_for('editprofile', id=session['userID']) }}">
+        <div class="profile-picture-small">
+            {% if session.get('profile_picture') %}
+                <img src="{{ url_for('get_profile_picture', user_id=session['userID']) }}" alt="Profile">
+            {% else %}
+                <img src="{{ url_for('static', filename='images/default_profile.png') }}" alt="Default Profile">
+            {% endif %}
+        </div>
+      </a>
+    
+      <a href="{{ url_for('sandbox') }}" class="btn">
+            Radošā telpa <i class="fa-regular fa-file-code fa-xl"></i> 
+      </a>
+      <a href="{{ url_for('lideri') }}" class="btn">
+            Līderi <i class="fa-solid fa-trophy fa-xl"></i>
+      </a>
+    
+    <img src="{{url_for('static', filename='images/codelatvian.png')}}" alt="logo" >
+  </nav>
+  <hr>
+  <div class="kursi">
+    
+    {% for course in p2 %}
+    
+    
+    
+    <div class="kurss" style="
+        background: #{{course[5]}};
+      ">
+      <a href="{{ url_for('view_lessons', course_id=course[0]) }}" style="color:#{{course[6]}};">
+      <div class="coverphoto">
+        <img src="{{ url_for('course_icon', course_id=course[0]) }}" alt="">
+      </div>
+      <div class="kurss_augsa">
+        <div class="kurss_nosaukums">
+          <h1>{{course[1]}}</h1>  
+          <h2>Līmenis: {{course[3]}}</h2> 
+        </div>
+        <h1>{{course[2]}}</h1>
+      </div>
+      <p>{{course[4]}}</p>
+      <div class="progress-container" style="border: 1px solid #{{course[6]}};">
+        <div class="progress-bar" style="width: {{ course[-1] }}%;">
+          <span class="progress-text">{{ course[-1] }}%</span>
+        </div>
+      </div>
+      </a>
+    </div>
+    {% endfor %}
+    
+  </div>
+</body>
+</html>
